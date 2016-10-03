@@ -1,0 +1,304 @@
+
+html, body {
+	text-align       : left;
+	height           : 100%;
+	width            : 100%;
+	min-width        : 100%;
+	position         : relative;
+	margin           : 0px;
+}
+
+/*-------- colors -------------*/
+
+$blue: #094db7;
+$blue_light: #021025;
+$defualt: #5d5d5d;
+$gray: #949494;
+$gray_light: #dbdbdb;
+$green: #1d9d73;
+
+.gray { color: $gray; }
+.blue { color: $blue; }
+.green { color: $green; }
+
+//-------------- Fonts ----------------- //
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(../fonts/droid-sans400.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(../fonts/droid-sans700.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Branina Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Branina Sans'), local('BraninaSans'), url(../fonts/BerninaSans-CondensedRegular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Branina Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Branina Sans Bold'), local('BraninaSans-Bold'), url(../fonts/BerninaSans-CondensedBold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Branina Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Branina Sans Light'), local('BraninaSans-Light'), url(../fonts/BerninaSans-CondensedLight.otf) format('opentype');
+}
+
+//-------------- typography ----------------- //
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Branina Sans', Helvetica, Arial, sans-serif;
+	color      : $defualt;
+}
+
+p, div {
+	font-family             : 'Droid Sans', Helvetica, Arial, sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust    : 100%;
+	text-rendering          : optimizeLegibility;
+	-webkit-font-smoothing  : antialiased;
+	color                   : $defualt;
+}
+
+label {
+	font-family: 'Branina Sans', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 12.5px;
+}
+
+.sans-serif {
+	font-family: 'Branina Sans', Helvetica, Arial, sans-serif;
+}
+
+/*-------- align -------------*/
+
+.center { text-align: center; }
+.left { text-align: left; }
+.right { text-align: right; }
+
+.col-centered {
+	float     : none;
+	margin    : 0 auto;
+	text-align: center;
+	display   : block;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+/*-------- links -------------*/
+
+a:link {color:$blue;}      
+a:visited {color:$blue;} 
+a:hover {color:$blue_light;}  
+a:active {color:$blue;}  
+
+.hand {
+	cursor: pointer; 
+	cursor: hand;
+}
+
+
+//-------------- Buttons -----------------//
+
+.btn { 
+	background-color: transparent; 
+	border-radius   : 3px;
+	border          : 1px solid $gray_light;
+	color           : $blue;
+	outline         : none;
+	min-width       : 100%;
+	text-align      : left;
+} 
+ 
+.btn:hover, 
+.btn:focus, 
+.btn:active, 
+.btn.active, 
+.open .dropdown-toggle.btn-add { 
+	color           : #ffffff; 
+	background-color: $blue; 
+	border-color    : $blue; 
+	outline         : none;
+}
+
+.btn-fade {
+	border: 0px;
+	border: none;
+	visibility:hidden;
+    opacity:0;
+    display:block;
+	text-align: center;
+    transition:opacity 1s linear, visibility 1s linear;
+
+}
+
+.shop-item:hover > td > .btn-fade {
+	visibility:visible;
+	opacity: 1;
+	transition: opacity 0.25s ease-in-out;
+	-moz-transition: opacity 0.25s ease-in-out;
+	-webkit-transition: opacity 0.25s ease-in-out;
+}
+
+.btn-add {
+	padding: 12px;
+	margin: 12px;
+}
+
+//-------------- animations -----------------//
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+/*--------- Alerts ------------*/
+
+.alert {
+	clear: both;
+	padding         : 8px 35px 8px 14px;
+	color           : #ffffff;
+	background-color: #021025; 
+	border-radius   : 3px;
+	color           : #ffffff;
+	width           : 100%;
+	margin          : 12px;
+	line-height     : 1.3em;
+	border          : 1px dotted #094db7;
+	border-radius   : 4px;
+	box-shadow      : 0 0 0 4px #021025, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
+.alert .close {
+	position   : relative;
+	top        : 1px;
+	right      : -21px;
+	line-height: 18px;
+	color      : #ffffff;
+}
+
+/*--------------- Fade ------------*/
+
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+
+/*--------------- Preloader ------------*/
+
+.loader {
+	color: $blue;
+	font-size: 90px;
+	text-indent: -9999em;
+	overflow: hidden;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	margin: 272px auto;
+	position: relative;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation: load6 1.7s infinite ease;
+	animation: load6 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+

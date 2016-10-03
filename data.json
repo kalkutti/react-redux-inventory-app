@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1474140523734,
+        "name": "Ketchup",
+        "desc": "Great on anything",
+        "date": 1474140523734,
+        "tax": 1,
+        "price": 9.99
+    },
+    {
+        "id": 1474140523777,
+        "name": "Mayo",
+        "desc": "Great on everything",
+        "date": 1474140523744,
+        "tax": 1,
+        "price": 9.99
+    },
+    {
+        "id": 1475459265288,
+        "name": "Lemon",
+        "desc": "great!",
+        "date": "2020-02-02",
+        "tax": false,
+        "price": "203"
+    }
+]
